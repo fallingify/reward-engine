@@ -1,7 +1,7 @@
 package flgfy.couponsystem.member.service;
 
 import flgfy.couponsystem.member.dto.MemberJoinReq;
-import flgfy.couponsystem.member.entity.Member;
+import flgfy.couponsystem.member.domain.Member;
 import flgfy.couponsystem.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

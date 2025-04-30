@@ -1,4 +1,4 @@
-package flgfy.couponsystem.member.entity;
+package flgfy.couponsystem.member.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

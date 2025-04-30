@@ -1,6 +1,7 @@
-package flgfy.couponsystem.coupon.entity;
+package flgfy.couponsystem.membercoupon.domain;
 
-import flgfy.couponsystem.member.entity.Member;
+import flgfy.couponsystem.coupon.domain.Coupon;
+import flgfy.couponsystem.member.domain.Member;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

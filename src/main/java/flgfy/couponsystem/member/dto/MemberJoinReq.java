@@ -1,6 +1,5 @@
 package flgfy.couponsystem.member.dto;
 
-import flgfy.couponsystem.member.entity.Member;
 import lombok.*;
 
 

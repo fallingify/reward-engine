@@ -1,6 +1,6 @@
 package flgfy.couponsystem.member.repository;
 
-import flgfy.couponsystem.member.entity.Member;
+import flgfy.couponsystem.member.domain.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MemberRepository extends JpaRepository<Member, Long> {
