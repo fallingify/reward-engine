@@ -1,4 +1,4 @@
-### reward-engine (Coupon Issuer)
+## Reward-engine (Coupon Issuer)
 
 This is a coupon issuance system. Administrators can create coupons, and each user can receive a coupon only once. Coupons also have an expiration date.
 
