@@ -6,7 +6,7 @@ This is a coupon issuance system. Administrators can create coupons, and each us
 <br><br>
 ### 📌 Project Overview
 
-- **Topic**: Coupon Issuance System (e.g., chicken, burger promotions)
+- **Topic**: Coupon Issuance System
 - **Goal**: Issue limited-time promotional coupons with a one-time claim restriction per user
 - **Features**:
   - Admin panel for managing coupon creation and expiration
