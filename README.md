@@ -1,28 +1,34 @@
-## Reward-engine (Coupon Issuer)
+## Reward-engine (쿠폰 발급 시스템)
 
-This is a coupon issuance system. Administrators can create coupons, and each user can receive a coupon only once. Coupons also have an expiration date.
-
-
-<br><br>
-### 📌 Project Overview
-
-- **Topic**: Coupon Issuance System
-- **Goal**: Issue limited-time promotional coupons with a one-time claim restriction per user
-- **Features**:
-  - Admin panel for managing coupon creation and expiration
-  - Redis-based stock control to handle concurrency
-  - Asynchronous coupon processing using Kafka
+이 프로젝트는 쿠폰 발급 시스템입니다. 관리자는 쿠폰을 생성할 수 있으며, 각 사용자는 쿠폰을 1회만 발급받을 수 있습니다. 또한 쿠폰에는 유효기간이 존재합니다.
 
 <br><br>
 
-### 🛠️ Tech Stack
+#### 프로젝트 개요
 
-| Category | Technology |
-|----------|------------|
-| Backend  | Spring Boot, Spring Data JPA |
-| Infra    | AWS EC2, RDS (MySQL), S3 |
-| Queue    | Apache Kafka |
-| Cache    | Redis |
-| Database | MySQL |
-| CI/CD    | GitHub Actions, AWS CodeDeploy |
-| Docs     | Swagger, Notion |
+- **주제**: 쿠폰 발급 시스템
+- **목표**: 사용자당 1회만 발급 가능한 이벤트성 쿠폰을 한정된 기간 동안 배포
+- **주요 기능**:
+  - 관리자 페이지를 통한 쿠폰 생성 및 만료 관리
+  - Redis 기반 재고 동시성 제어
+  - Kafka를 활용한 비동기 쿠폰 처리
+
+<br>
+
+####  기술 스택
+
+| 분류     | 기술 요소                             |
+|----------|----------------------------------------|
+| 백엔드   | Spring Boot, Spring Data JPA           |
+| 인프라   | AWS EC2, RDS(MySQL), S3                |
+| 메시지 큐 | Apache Kafka                           |
+| 캐시     | Redis                                  |
+| 데이터베이스 | MySQL                             |
+| CI/CD    | GitHub Actions, AWS CodeDeploy         |
+| 문서화   | Swagger, Notion                         |
+
+<br>
+#### 프로젝트 구조
+
+<br>
+#### API엔드포인트
