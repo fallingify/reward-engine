@@ -1,31 +1,45 @@
 package flgfy.couponsystem.coupon.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
 import java.time.LocalDateTime;
 
-/**
- * 관리자
- */
+@Getter
 @Entity
 public class Coupon {
-    @Id @GeneratedValue
+
+    @Id
+    @GeneratedValue
     private Long id;
 
-    private String code; // 쿠폰 번호
-
-    @Enumerated(EnumType.STRING) // 또는 EnumType.ORDINAL
-    @Column(nullable = false)
-    private CouponType type;
-
-
-    private LocalDateTime createdAt; // 생성 일시
-    private LocalDateTime expiresAt; // 유효 기간
-
-    private int totalQty;  // 발급 총량
-    private int issuedQty; // 현재 발급된 수량
+    private String name;
 
     @Enumerated(EnumType.STRING)
-    private CouponStatus status; // ACTIVE, EXPIRED, DELETED
+    private CouponType type;
 
+    private int totalCount;
+
+    private int issuedCount = 0;
+
+    private int amount; // 예: 250000
+
+    private LocalDateTime expirationDate;
+
+    public boolean isExpired() {
+        return expirationDate != null && expirationDate.isBefore(LocalDateTime.now());
+    }
+
+    public boolean isOutOfStock() {
+        return issuedCount >= totalCount;
+    }
+
+    public void issue() {
+        if (isExpired()) throw new IllegalStateException("Coupon expired");
+        if (isOutOfStock()) throw new IllegalStateException("Coupon out of stock");
+        issuedCount++;
+    }
+
+    public boolean getType() {
+    }
 }
