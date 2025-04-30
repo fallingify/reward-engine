@@ -2,6 +2,7 @@ package flgfy.couponsystem.coupon.controller;
 
 import flgfy.couponsystem.coupon.domain.Coupon;
 import flgfy.couponsystem.coupon.service.CouponService;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,8 @@ import java.util.List;
 public class ConponController {
     private final CouponService couponService;
 
+
+    @Operation(summary = "정책형 쿠폰 발급", description = "memberId가 1회만 POLICY_250K 쿠폰을 발급받습니다.")
     @PostMapping("/{couponId}/issue/policy")
     public ResponseEntity<String> issuePolicyCoupon(@PathVariable Long couponId,
                                                     @RequestParam Long memberId) {
@@ -21,6 +24,7 @@ public class ConponController {
         return ResponseEntity.ok("Policy coupon issued successfully");
     }
 
+    @Operation(summary = "정책형 쿠폰 목록 조회")
     @GetMapping("/policy")
     public ResponseEntity<List<Coupon>> getPolicyCoupons() {
         return ResponseEntity.ok(couponService.getPolicyCoupons());
