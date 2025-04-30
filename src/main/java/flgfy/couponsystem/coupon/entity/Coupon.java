@@ -25,4 +25,7 @@ public class Coupon {
     private int totalQty;  // 발급 총량
     private int issuedQty; // 현재 발급된 수량
 
+    @Enumerated(EnumType.STRING)
+    private CouponStatus status; // ACTIVE, EXPIRED, DELETED
+
 }
